@@ -15,3 +15,6 @@ ${VAR iable4}-$variable5
 $$
 ${^}
 $?
+$Error
+
+Get-Help about_automatic_variables
