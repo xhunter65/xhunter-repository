@@ -18,3 +18,12 @@ $?
 $Error
 
 Get-Help about_automatic_variables
+
+$ConfirmPreference
+$DebugPreference
+
+[int]$variable1=100
+[int]$variable2="Hola"
+
+$variable1.GetType()
+
