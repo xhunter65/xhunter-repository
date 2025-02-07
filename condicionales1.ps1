@@ -89,3 +89,58 @@ switch -Regex ($url, $email, $email2)
 	'^ftp\://.*$' { "[$_] es una direccion ftp" }
 	'^(http[s]?)\://.*$' { "[$_] es una direccion web, que utiliza [$($matches[1])]"}
 }
+
+
+for (($i = 0), ($j = 0); $i -lt 5; $i++)
+{
+	"`$i:$i"
+	"`$j:$j"
+}
+
+for ($($i = 0;$j = 0); $i -lt 5; $($i++;$j++))
+{
+	"`$i:$i"
+	"`$j:$j"
+}
+
+$ssoo = "freebsd", "openbsd", "solaris", "fedora", "ubuntu", "netbsd"
+foreach ($so in $ssoo)
+{
+	Write-Host $so
+}
+
+foreach ($archivo in Get-ChildItem)
+{
+	if ($archivo.length -ge 10KB)
+	{
+		Write-Host $archivo -> [($archivo.length)]
+	}
+}
+
+$num = 0
+
+while ($num -ne 3)
+{
+	$num++
+	Write-Host $num
+}
+
+$num = 0
+
+while ($num -ne 5)
+{
+	if ($num -eq 1) { $num = $num + 3 ; Continue}
+	$num++
+	Write-Host $num
+}
+
+$valor = 5
+$multiplicacion = 1
+do
+{
+	$multiplicacion = $multiplicacion * $valor
+	$valor--
+}
+while ($valor -gt 0)
+
+Write-Host $multiplicacion
