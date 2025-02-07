@@ -27,3 +27,42 @@ Get-Service | Where-Object {$_.Status -eq "Running"}
 
 (Get-Item '.\Nuevo Documento de texto.txt').IsReadOnly = 0
 
+
+Get-ChildItem *.txt
+(Get-Item '.\Nuevo Documento de texto.txt')
+
+(Get-Item '.\Nuevo Documento de texto.txt'). CopyTo("D:\Desktop\prueba.txt")
+
+(Get-Item .\test.txt).Delete()
+
+Get-ChildItem *.txt
+
+$miObjeto = New-Object PSObject
+
+$miObjeto | Add-Member -MemberType NoteProperty -Name Nombre -Value "Miguel"
+
+ $miObjeto | Add-Member -MemberType NoteProperty -Name Edad -Value 23
+
+ $miObjeto | Add-Member -MemberType ScriptMethod -Name Saludar -Value { Write-Host "¡Hola Mundo!" }
+
+ $miObjeto | Get-Member
+
+ $miObjeto = New-Object -TypeName PSObject -Property 
+ @{
+>>    Nombre = "Miguel"
+>>    Edad = 23
+>> }
+
+$miObjeto | Add-Member -MemberType ScriptMethod -Name Saludar -Value { Write-Host "¡Hola Mundo!" }
+$miObjeto | Get-Member
+
+$miObjeto = [PSCustomObject]@{
+>>    Nombre = "Miguel"
+>>    Edad = 23
+>> }
+
+$miObjeto | Add-Member -MemberType ScriptMethod -Name Saludar -Value { Write-Host "¡Hola Mundo!" }
+
+miObjeto | Get-Member
+
+Get-Process -Name Acrobat  | Stop-Process
