@@ -70,3 +70,8 @@ Get-Process -Name Acrobat  | Stop-Process
 Get-help -full Get-Process
 
 Get-help -full Stop-Process
+
+Get-Command -Name dir
+
+Get-Command -Noun WSManInstance
+
