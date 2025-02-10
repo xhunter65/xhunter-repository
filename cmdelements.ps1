@@ -66,3 +66,7 @@ $miObjeto | Add-Member -MemberType ScriptMethod -Name Saludar -Value { Write-Hos
 miObjeto | Get-Member
 
 Get-Process -Name Acrobat  | Stop-Process
+
+Get-help -full Get-Process
+
+Get-help -full Stop-Process
