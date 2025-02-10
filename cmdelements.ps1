@@ -5,6 +5,8 @@ Get-Command -Name Get-ChildItem -Args Cert: -Syntax
 
 Get-Command -Name dir
 
+#objetos y pipeline
+
 Get-Command -Noun WSManInstance
 
 Get-Service -name "LSM" | Get-Member 
@@ -71,7 +73,38 @@ Get-help -full Get-Process
 
 Get-help -full Stop-Process
 
-Get-Command -Name dir
+Get-Process
+Get-Process -Name Acrobat | Stop-Process
+Get-Process
 
-Get-Command -Noun WSManInstance
+Get-Help -Full Get-ChildItem
+Get-Help -Full Get-Clipboard
 
+Get-ChildItem *..txt | Get-Clipboard
+
+Get-Help -Full Stop-Service
+
+Get-Service
+
+Get-Service Spooler | Stop-Service
+
+Get-Service
+
+Get-Service
+
+"Spooler" | Stop-Service
+
+Get-Service
+
+Get-Service
+
+Get-Service
+$miObjeto = [PSCustomObject] @{
+    Name= "Spooler"
+}
+
+$miobjeto | Stop-Service
+
+Get-Service
+
+Get-Service
